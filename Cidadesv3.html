@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Cidades</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="Cidadesv3.css">
+</head>
+<body>
+
+
+  <ul class="topnav">
+    <li class="left"><a href="index.html">New Zealand</a></li>
+    <li><a href="Sobrev3.html">Sobre</a></li>
+    <li><a href="Cidadesv3.html">Cidades</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+
+
+  <div class="header">
+  </div>
+
+  <div>
+    <ul class="breadcrumb">
+        <div class="margem">
+          <li><a href="index.html">Home</a></li>
+          <li>Cidades</li>
+        </div>
+    </ul>
+  </div>
+
+  <div class="main">
+        <div>    
+          <p class = "texto" >Escolha uma cidade e saiba mais sobre o que cada uma pode te oferecer</p>
+        </div>
+        
+        
+
+            
+      <div class="texto">
+          <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Todas as cidades</button>
+            <button class="btn" onclick="filterSelection('nature')"> Natureza</button>
+            <button class="btn" onclick="filterSelection('urbano')"> Urbano</button>
+            <button class="btn" onclick="filterSelection('esportes')"> Esportes</button>
+            <button class="btn" onclick="filterSelection('media')"> Terra Média</button>
+          </div>
+      </div>
+
+
+    <div class="row">
+      <div class="column urbano">
+        <div class="container ">
+            <a class="btn-img" href="Aucklandv3.html"> <img src="Auckland.jpg" style="width:100%" alt="Auckland"> </a>
+            <div class="centered">Auckland</div>
+        </div>
+      </div>
+
+      <div class="column nature esportes">
+        <div class="container ">
+            <a class="btn-img" href="Queenstownv3.html"> <img src="Queenstown.jpg" style="width:100%" alt="Queenstown"> </a> 
+            <div class="centered">Queenstown</div>
+        </div>
+      </div>
+
+      <div class="column nature esportes">
+        <div class="container ">
+            <a class="btn-img" href="Wanakav3.html"> <img src="Wanaka.jpg" style="width:100%" alt="Wanaka"> </a>
+            <div class="centered">Wanaka</div>
+        </div>
+      </div>
+      
+      <div class="column nature esportes">
+        <div class="container ">
+            <a class="btn-img" href="Rotoruav3.html"> <img src="Rotorua.jpg" style="width:100%" alt="Rotorua"> </a>
+            <div class="centered">Rotorua</div>
+        </div>
+      </div>
+
+      <div class="column urbano">
+        <div class="container ">
+            <a class="btn-img" href="Christchurchv3.html"> <img src="Chistchurch.jpg" style="width:100%" alt="Chistchurch"> </a>
+            <div class="centered">Christchurch</div>
+        </div>
+      </div>
+
+      <div class="column media urbano">
+        <div class="container ">
+            <a class="btn-img" href="Wellingtonv3.html"> <img src="Wellington.jpg" style="width:100%" alt="Wellington"> </a>
+            <div class="centered">Wellington</div>
+        </div>
+      </div>
+
+      <div class="column nature esportes">
+        <div class="container ">
+            <a class="btn-img" href="Tekapov3.html"> <img src="Tekapo.jpg" style="width:100%" alt="Tekapo"> </a>
+            <div class="centered">Tekapo</div>
+        </div>
+      </div>
+
+      <div class="column nature esportes terra media">
+        <div class="container ">
+            <a class="btn-img" href="Nelsonv3.html"> <img src="Nelson.jpg" style="width:100%" alt="Nelson"> </a> 
+            <div class="centered">Nelson</div> 
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+  <br>
+  <br>
+  <div class="footer">
+    <img scr="Nelsinho.png" width="28" height="34" alt="marca registrada">
+  </div>
+ 
+
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
