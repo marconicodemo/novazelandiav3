@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1
+  {
+      font-size:50px;
+      font-weight: bold;
+      margin-left: 5%;
+  }
+  
+  body {
+    
+    margin: 0;
+  }
+  
+  .header 
+{
+    padding: 100px;
+    background-image: url("NaturezaH1.jpg");
+    background-size: cover;
+    
+}
+
+  
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  ul.topnav li {
+      float: right;
+  margin-right: 5%;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: #111;}
+  
+  ul.topnav li a.active {background-color: #4CAF50;}
+  
+  ul.topnav li.left {
+      float: left;
+  margin-left: 5%;}
+  
+  
+  .texto
+  {
+      text-align: justify;
+      margin-right:5%; 
+      margin-left: 5%;
+      width: 90%;
+      
+  }
+
+
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+
+  .row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  
+  .column {
+    -ms-flex: 25%; 
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  
+  .footer {
+    padding: 10px;
+    text-align: center;
+    background: rgb(10, 10, 10);
+  }
+  
+   
+  @media screen and (max-width: 600px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+    
+  }
+  
+  @media screen and (max-width: 600px) {
+      ul.topnav li.left, 
+      ul.topnav li {float: none;}
+    }
+
+    @media screen and (max-width: 800px) {
+        .column {
+          -ms-flex: 50%;
+          flex: 50%;
+          max-width: 50%;
+        }
+    @media screen and (max-width: 600px) {
+        .column {
+          -ms-flex: 100%;
+          flex: 100%;
+          max-width: 100%;
+        }
+
+
+
