@@ -29,7 +29,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #111;
   }
   
   ul.topnav li {
@@ -96,7 +96,7 @@
 
   
   .footer {
-    padding: 10px;
+    padding: 40px;
     text-align: center;
     background: rgb(10, 10, 10);
   }
